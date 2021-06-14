@@ -9,18 +9,21 @@ Building the project
 
 To build the project run: `mvn clean install`
 
-Running a Spring Boot module
+Running the service
 ====================
 To run the service: `mvn spring-boot:run`
 It will  download the embedded mongo database and connect the service on `localhost:27017/transferDB`.
 Service will start on port `http://localhost:8080`
 
 
-#API Specification
-###Endpoint
+API Specification
+====================
+Endpoint
+--------
 POST [/transfers](#/transfers)
 
-###Sample Input
+Sample Input
+------------
 ```json
 {
   "sourceAccountNumber": "22222",
@@ -28,7 +31,8 @@ POST [/transfers](#/transfers)
   "amount": "100.12"
 }
 ```
-###Sample Output
+Sample Output
+-------------
 ```json
 {
   "id": "c4e5b313-4624-4b5c-b64f-9e5b94d20f2e",
@@ -55,7 +59,8 @@ POST [/transfers](#/transfers)
   }
 }
 ```
-###Note:
+Note:
+-----
 Service is configured for two accounts '11111' and '22222' with initial balance of '10000' each.
 
 
